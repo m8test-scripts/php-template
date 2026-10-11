@@ -3,17 +3,17 @@ plugins {
     alias(m8test.plugins.m8test.gradle.script.php)
 }
 // 在gradle.properties中定义的变量, 用于指定m8test版本
-val m8testVersion: String by project
-val composeExtensionVersion: String by project
-val reflectExtensionVersion: String by project
+val m8testVersion = providers.gradleProperty("m8testVersion").get()
+val composeExtensionVersion = providers.gradleProperty("composeExtensionVersion").get()
+val reflectExtensionVersion = providers.gradleProperty("reflectExtensionVersion").get()
 // 在gradle.properties中定义的变量, 用于指定无障碍插件版本
-val accessibilityVersion: String by project
+val accessibilityVersion = providers.gradleProperty("accessibilityVersion").get()
 // 在gradle.properties中定义的变量, 用于指定图色插件版本
-val opencvVersion: String by project
+val opencvVersion = providers.gradleProperty("opencvVersion").get()
 // 在gradle.properties中定义的变量, 用于指定文字识别插件版本
-val ocrVersion: String by project
+val ocrVersion = providers.gradleProperty("ocrVersion").get()
 // 语言插件版本
-val languagePluginVersion: String by project
+val languagePluginVersion = providers.gradleProperty("languagePluginVersion").get()
 // m8testPhp 闭包用于配置 m8test php 项目
 m8testPhp {
 //    properties["ADB_HOME"] = "/usr/bin/" // ADB安装目录
@@ -48,21 +48,15 @@ m8testPhp {
         debuggerPort = 5354
         // 打包apk时的运行时模板apk配置, 打包apk时会将脚本项目打包到该模板apk中
         runtimeConfig {
-            // 模板apk的版本
-            versionName = m8testVersion
-            // 模板apk下载地址
-            downloadUrl =
-                "https://github.com/m8test/runtime-release/releases/download/${versionName}/com.m8test.app.runtime-release_${versionName}.apk"
+            // Runtime Maven artifact 版本
+            version = m8testVersion
         }
         // M8Test 开发工具配置闭包
         developmentKitConfig {
             // 开发工具的包名, 使用默认就好
             packageName = "com.m8test.app.developmentkit"
-            // 开发工具版本
-            versionName = m8testVersion
-            // 开发工具下载地址
-            downloadUrl =
-                "https://github.com/m8test/development-kit-release/releases/download/$versionName/com.m8test.app.developmentkit-release_$versionName.apk"
+            // Development Kit Maven artifact 版本
+            version = m8testVersion
             // api文档根目录
             docsRoot = "https://sdk-docs.m8test.com/sdk"
         }
