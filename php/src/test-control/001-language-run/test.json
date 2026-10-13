@@ -2,12 +2,18 @@
   "manifestVersion": 1,
   "protocolVersion": "2.0.0",
   "requestId": "php-template-language-run",
-  "extensionId": "com.m8test.extension.language.php",
-  "languageEntryId": "php",
   "fileName": "main.php",
   "scriptFile": "main.php",
   "timeoutMillis": 30000,
   "properties": {},
   "components": [],
-  "expectedLogs": ["test-control-language:php:passed"]
+  "expectedLogs": [
+    "test-control-language:php:passed"
+  ],
+  "language": {
+    "groupId": "com.m8test.language",
+    "artifactId": "php",
+    "version": "0.1.8",
+    "languageEntryId": "php"
+  }
 }
