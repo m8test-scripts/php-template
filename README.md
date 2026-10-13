@@ -7,7 +7,7 @@
 
 ## 📦 Gradle 任务说明
 
-跨项目开发顺序见 m8test-gradle-plugin 仓库的 `docs/development/gradle-tasks/script-development.md`。
+运行 `./gradlew -q tasks --all` 查看本项目注册的开发任务。
 
 ### 任务分组
 
@@ -76,7 +76,7 @@
 
 ## 宿主或 Gradle 插件更新时联调
 
-- Gradle 插件有改动时，先在 `m8test-gradle-plugin` 仓库执行 `./gradlew -q publishAllToMavenLocal`，再确认本项目使用对应的 `m8testVersion`。
+- Gradle 插件有改动时，先在 `Gradle 插件` 仓库执行 `./gradlew -q publishAllToMavenLocal`，再确认本项目使用对应的 `m8testVersion`。
 - 宿主有未发布改动时，先构建 Development Kit APK，并在本机将 `DEVKIT_APK` 设为相对于本 PHP 项目根目录的 APK 路径。
 - 运行脚本时通过 `-Pm8testDevelopmentKitApk="$DEVKIT_APK"` 使用该 APK；不需要把宿主文件路径写入此模板。
 
