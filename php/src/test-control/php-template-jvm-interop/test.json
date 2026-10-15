@@ -1,0 +1,19 @@
+{
+  "manifestVersion": 1,
+  "protocolVersion": "2.0.0",
+  "requestId": "php-template-jvm-interop",
+  "fileName": "main.php",
+  "scriptFile": "main.php",
+  "timeoutMillis": 30000,
+  "properties": {},
+  "components": [],
+  "expectedLogs": [
+    "php-template-jvm-interop:passed"
+  ],
+  "language": {
+    "groupId": "com.m8test.language",
+    "artifactId": "php",
+    "version": "0.1.8",
+    "languageEntryId": "php"
+  }
+}
