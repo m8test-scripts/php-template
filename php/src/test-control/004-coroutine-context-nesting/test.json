@@ -1,0 +1,13 @@
+{
+  "manifestVersion": 1,
+  "protocolVersion": "2.0.0",
+  "requestId": "php-template-coroutine-context-nesting",
+  "fileName": "main.php",
+  "scriptFile": "main.php",
+  "timeoutMillis": 30000,
+  "properties": { "m8test.testControl.adbPort": "5555" },
+  "components": [],
+  "expectedLogs": ["nest:php:outer-started", "nest:php:outer-resumed", "nest:php:inner-callback", "nest:php:other-task-progressed", "nest:php:delay-resumed", "nest:php:gate"],
+  "expectedOutcome": "succeeded",
+  "language": { "groupId": "com.m8test.language", "artifactId": "php", "version": "0.1.8", "languageEntryId": "php" }
+}

@@ -1,0 +1,33 @@
+{
+  "manifestVersion": 1,
+  "protocolVersion": "2.0.0",
+  "requestId": "php-template-coroutine-thread-context",
+  "fileName": "main.php",
+  "scriptFile": "main.php",
+  "timeoutMillis": 30000,
+  "properties": {
+    "m8test.testControl.adbPort": "5555"
+  },
+  "components": [],
+  "expectedLogs": [
+    "coroutine:php:script-main-verified",
+    "coroutine:php:io-captured-value-verified",
+    "coroutine:php:other-task-progressed",
+    "coroutine:php:delayed-captured-value-verified",
+    "coroutine:php:launch",
+    "coroutine:php:async",
+    "coroutine:php:async-success",
+    "coroutine:php:with-context",
+    "coroutine:php:flow:1",
+    "coroutine:php:flow:2",
+    "coroutine:php:flow-complete",
+    "coroutine:php:cancelled-work-complete",
+    "coroutine:php:gate"
+  ],
+  "language": {
+    "groupId": "com.m8test.language",
+    "artifactId": "php",
+    "version": "0.1.8",
+    "languageEntryId": "php"
+  }
+}

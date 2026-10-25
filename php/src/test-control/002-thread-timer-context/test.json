@@ -1,0 +1,27 @@
+{
+  "manifestVersion": 1,
+  "protocolVersion": "2.0.0",
+  "requestId": "php-template-thread-timer-context",
+  "fileName": "main.php",
+  "scriptFile": "main.php",
+  "timeoutMillis": 30000,
+  "properties": {
+    "m8test.testControl.adbPort": "5555"
+  },
+  "components": [],
+  "expectedLogs": [
+    "thread-context:php:immediate",
+    "thread-context:php:timeout",
+    "thread-context:php:interval",
+    "thread-context:php:thread",
+    "thread-context:php:thread-start",
+    "thread-context:php:thread-exit",
+    "thread-context:php:verified"
+  ],
+  "language": {
+    "groupId": "com.m8test.language",
+    "artifactId": "php",
+    "version": "0.1.8",
+    "languageEntryId": "php"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "manifestVersion": 1,
+  "protocolVersion": "2.0.0",
+  "requestId": "php-template-coroutine-cancellation-composition",
+  "fileName": "main.php",
+  "scriptFile": "main.php",
+  "timeoutMillis": 30000,
+  "properties": {
+    "m8test.testControl.adbPort": "5555"
+  },
+  "components": [],
+  "expectedLogs": [
+    "coroutine:php:timeout-cancellation-preserved",
+    "coroutine:php:timeout-or-null-ok",
+    "coroutine:php:timeout-or-null-complete",
+    "coroutine:php:loop-timeout-cancelled-wait",
+    "coroutine:php:loop-iteration:1",
+    "coroutine:php:loop-iteration:2",
+    "coroutine:php:loop-iteration:3",
+    "coroutine:php:loop-completed-count:3",
+    "coroutine:php:composed-wait-ok",
+    "coroutine:php:composed-wait-complete",
+    "coroutine:php:cancellation-gate"
+  ],
+  "language": {
+    "groupId": "com.m8test.language",
+    "artifactId": "php",
+    "version": "0.1.8",
+    "languageEntryId": "php"
+  }
+}
