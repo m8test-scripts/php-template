@@ -39,7 +39,7 @@ $composeView->create(function ($slot) use ($stringResources) {
                 $text->setText($stringResources->getString("demo.counter.label") . $state->getValue());
             });
             $columnSlot->TextButton(function ($button) use ($state, $stringResources) {
-                $button->setOnClick(function () use ($state) {
+                $button->onClick(function () use ($state) {
                     // 4. 点击按钮时， 更新状态的值
                     $state->setValue($state->getValue() + 1);
                 });
